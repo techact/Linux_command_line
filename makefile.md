@@ -1,9 +1,11 @@
 create directory mymake and inside create Makefile and copy the below content and run it.
 
 #### Commands
-make
-make build
+ - make
+ - make build
 
+#### Verify makefile tab and spaces
+cat -e -t -v  makefile
 NAME=project
 VERSION=0.0.1
 
@@ -59,7 +61,7 @@ uninstall:
 
 .PHONY: build sign clean test tag release install uninstall all
 
-#### Another example:
+#### Example 2:
 
 all:
         ls
@@ -76,4 +78,20 @@ clean:
         rm *.txt
 
 
-cat -e -t -v  makefile
+
+#### Example: 3
+
+all: local
+
+local:
+    python manage.py runserver
+    
+external:
+    python manage.py runserver 1.2.3.4:9999
+    
+super:
+    python manage.py createsuperuser
+    
+migrate:
+    python manage.py makemigrations
+    python manage.py migrate
