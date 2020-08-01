@@ -1,3 +1,9 @@
+create directory mymake and inside create Makefile and copy the below content and run it.
+
+#### Commands
+make
+make build
+
 NAME=project
 VERSION=0.0.1
 
@@ -52,3 +58,22 @@ uninstall:
 
 
 .PHONY: build sign clean test tag release install uninstall all
+
+#### Another example:
+
+all:
+        ls
+        @echo "test"
+say_hello:
+        @echo "Hello World"
+
+generate:
+        @echo "Creating empty text files..."
+        touch file-{1..10}.txt
+
+clean:
+        @echo "Cleaning up..."
+        rm *.txt
+
+
+cat -e -t -v  makefile
