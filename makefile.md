@@ -6,6 +6,8 @@ create directory mymake and inside create Makefile and copy the below content an
 
 #### Verify makefile tab and spaces
 cat -e -t -v  makefile
+
+```bash
 NAME=project
 VERSION=0.0.1
 
@@ -60,9 +62,9 @@ uninstall:
 
 
 .PHONY: build sign clean test tag release install uninstall all
-
+```
 #### Example 2:
-
+```
 all:
         ls
         @echo "test"
@@ -76,11 +78,11 @@ generate:
 clean:
         @echo "Cleaning up..."
         rm *.txt
-
+```
 
 
 #### Example: 3
-
+```
 all: local
 
 local:
@@ -95,3 +97,4 @@ super:
 migrate:
     python manage.py makemigrations
     python manage.py migrate
+```
